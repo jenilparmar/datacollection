@@ -63,6 +63,12 @@ export default function Home() {
       console.error("Error submitting form:", error);
       alert("An error occurred. Please try again.");
     }
+
+
+
+
+    setQuestion("");
+    setBase64Image("")
   };
 
   return (
@@ -73,6 +79,7 @@ export default function Home() {
           placeholder="Question"
           rows={10}
           cols={10}
+          value={question}
           onChange={(e) => setQuestion(e.target.value)}
           id="g"
           className="text-black mt-4 text-3xl"
