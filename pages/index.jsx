@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const [base64Image, setBase64Image] = useState("");
   const [question, setQuestion] = useState("");
-
+const [ans , setans] = useState("")
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
@@ -43,6 +43,7 @@ export default function Home() {
     const data = {
       question: question,
       image: base64Image,
+      ans:ans
     };
 
     try {
@@ -69,6 +70,7 @@ export default function Home() {
 
     setQuestion("");
     setBase64Image("")
+    setans("")
   };
 
   return (
@@ -84,6 +86,7 @@ export default function Home() {
           id="g"
           className="text-black mt-4 text-3xl"
         ></textarea>
+        <input type="text" placeholder="answer" value={ans} className="text-black self-center h-10 border-2 mt-2 border-yellow-300" name=""  id="" onChange={(e)=>setans(e.target.value)} />
         <input type="file" name="image" id="k" onChange={handleFileChange} />
         <button onClick={handleSubmit} className="bg-red-500 w-fit p-3 px-10  active:scale-95 transition-all duration-100 self-center">Submit</button>
         {base64Image && (
