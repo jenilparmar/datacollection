@@ -56,7 +56,8 @@ const [ans , setans] = useState("")
       });
 
       if (res.status === 201) {
-        alert("Done! Share a new Question!!🫡");
+        console.log('done');
+        
       } else {
         alert("Do it again!! 🥹");
       }
