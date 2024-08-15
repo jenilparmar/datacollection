@@ -7,7 +7,7 @@ export default async function handler(req, res) {
         try {
             await client.connect();
             const database = client.db('dc');
-            const collection = database.collection('JEE_MATHS_NORMAL');
+            const collection = database.collection('Jee_Mains_BiNomial');
             const data = req.body;
 
             const result = await collection.insertOne(data);
