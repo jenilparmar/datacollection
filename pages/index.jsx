@@ -115,7 +115,7 @@ export default function Home() {
             onChange={(e) => setChapter(e.target.value)}
             className="text-black border-2 border-yellow-300 mt-2 w-60 px-3 ml-2"
           >
-            {[...Array(15).keys()].map(i => (
+            {[...Array(16).keys()].map(i => (
               <option key={i} value={i + 1} className="w-60">{i + 1}</option>
             ))}
           </select>
