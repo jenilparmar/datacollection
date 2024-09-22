@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Inter } from "next/font/google";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -93,13 +94,8 @@ const [ans , setans] = useState("")
         {base64Image && (
           <div>
             <h3>Base64 Image:</h3>
-            <textarea
-              readOnly
-              rows={10}
-              cols={50}
-              value={base64Image}
-              className="text-black mt-4 text-3xl"
-            ></textarea>
+            <Image src={base64Image}  width={450} height={200}/>
+           
           </div>
         )}
       </center>
